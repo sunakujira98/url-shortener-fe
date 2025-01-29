@@ -1,4 +1,4 @@
-import ShortURLPage from '@/pages/ShortURL'
+import ShortURLPage from '@/sections/ShortURL'
 
 interface PageProps {
   params: Promise<{
