@@ -22,7 +22,7 @@ export const homeFormSchema = yup
   .required()
 
 const HomePage = () => {
-  const { mutate, isPending, data, isSuccess } = useCreateURLShortenerMutation()
+  const { mutate, isPending, data, isError } = useCreateURLShortenerMutation()
 
   const {
     control,
@@ -81,7 +81,7 @@ const HomePage = () => {
                   </button>
                 </div>
               )}
-              <Button type="submit" loading={isPending} disabled={isSuccess}>
+              <Button type="submit" loading={isPending} disabled={isError}>
                 Get Short URL
               </Button>
             </form>
