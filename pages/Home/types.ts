@@ -6,6 +6,6 @@ export type THomeFormData = {
 
 export const homeFormSchema = yup
   .object({
-    url: yup.string().required('URL is required').matches(/\./, 'Invalid URL Format'),
+    url: yup.string().required('URL is required').url('Invalid URL Format'),
   })
   .required()
