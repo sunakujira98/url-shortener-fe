@@ -4,13 +4,22 @@ import { ClipboardDocumentIcon } from '@heroicons/react/24/outline'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
 import toast, { Toaster } from 'react-hot-toast'
+import * as yup from 'yup'
 
 import { Button } from '@/components/Button'
 import { ControlledInput } from '@/components/ControlledFields/ControlledInput'
 import { Text } from '@/components/Text'
 import { useCreateURLShortenerMutation } from '@/query/useURLShortener'
 
-import { homeFormSchema, THomeFormData } from './types'
+export type THomeFormData = {
+  url: string
+}
+
+export const homeFormSchema = yup
+  .object({
+    url: yup.string().required('URL is required').url('Invalid URL Format'),
+  })
+  .required()
 
 const HomePage = () => {
   const { mutate, isPending, data, isSuccess } = useCreateURLShortenerMutation()
