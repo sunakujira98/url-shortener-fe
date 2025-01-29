@@ -66,7 +66,10 @@ const HomePage = () => {
           </div>
           <div className="w-full max-w-2xl p-8 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg">
             <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-              <ControlledInput control={control} name="url" errors={errors} placeholder="URL" />
+              <div className="flex flex-col gap-4">
+                <ControlledInput control={control} name="url" errors={errors} placeholder="URL" />
+                <Text variant="caption">Eg: https://youtube.com</Text>
+              </div>
               {data && (
                 <div className="flex items-center gap-2 justify-center">
                   <a href={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${data.short_url}`} target="_blank">
