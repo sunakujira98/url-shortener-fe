@@ -1,9 +1,9 @@
 import ShortURLPage from '@/pages/ShortURL'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     shortUrl: string
-  }
+  }>
 }
 
 export default async function Page({ params }: PageProps) {
