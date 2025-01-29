@@ -54,7 +54,7 @@ const HomePage = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <div className="grid lg:grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-[url('/home.png')] bg-cover bg-center">
+      <div className="flex flex-col max-sm:pt-40 lg:grid lg:grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-[url('/home.png')] bg-cover bg-center">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <div className="flex flex-col lg:flex-row items-center gap-2 justify-center">
             <Text variant="display" as="span">
