@@ -69,8 +69,7 @@ const HomePage = () => {
               <ControlledInput control={control} name="url" errors={errors} placeholder="URL" />
               {data && (
                 <div className="flex items-center gap-2 justify-center">
-                  <Text>Generated URL</Text>
-                  <Text>{`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${data.short_url}`}</Text>
+                  <Text className="text-green-600">{`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${data.short_url}`}</Text>
                   <button
                     type="button"
                     onClick={() => copyToClipboard(`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${data.short_url}`)}
